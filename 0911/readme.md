@@ -1,16 +1,15 @@
-## 1.7 Review Questions and Exercises
+# 1.7 Review Questions and Exercises
 
-### 1.7.1 Short Answer
+## 1.7.1 Short Answer
 
 1. In an 8-bit binary number, which is the most significant bit (MSB)?
 
-맨 왼쪽 비트
+    맨 왼쪽 비트
 
-(**MSB는 가장 왼쪽(최상위)비트)
+    (**MSB는 가장 왼쪽(최상위)비트)
 
-1. What is the decimal representation of each of the following unsigned binary integers?
-    
-    (부호 없는 8비트 2진수를 10진수로 변환하시오.)
+2. What is the decimal representation of each of the following unsigned binary integers?
+(부호 없는 8비트 2진수를 10진수로 변환하시오.)
     
     a. 00110101
     
@@ -29,9 +28,8 @@
     =204
     
 
-1. What is the sum of each pair of binary integers?
-    
-    (8비트 이진수 쌍의 합을 구하시오.)
+3. What is the sum of each pair of binary integers?
+(8비트 이진수 쌍의 합을 구하시오.)
     
     a. 10101111 + 11011011
     
@@ -43,15 +41,14 @@
     
     = 100100001
     
-2. Calculate binary 00001101 minus 00000111.
+4. Calculate binary 00001101 minus 00000111.
 
-00001101 - 00000111
+    00001101 - 00000111
 
-= 00000110
+    = 00000110
 
-1. How many bits are used by each of the following data types?
-    
-    (다음 자료형이 각각 몇 비트를 사용하는지 쓰시오.)
+5. How many bits are used by each of the following data types?
+(다음 자료형이 각각 몇 비트를 사용하는지 쓰시오.)
     
     a. word
     
@@ -70,10 +67,9 @@
     word * 8 = 128비트(= 16바이트)
     
 
-1. What is the minimum number of binary bits needed to represent each of the following
+6. What is the minimum number of binary bits needed to represent each of the following
 unsigned decimal integers?
-    
-    (부호 없는 10진 정수를 표현하는 데 필요한 최소 비트 수는 얼마인가?)
+(부호 없는 10진 정수를 표현하는 데 필요한 최소 비트 수는 얼마인가?)
     
     a. 4095
     
@@ -95,9 +91,8 @@ unsigned decimal integers?
     
     → 16비트
     
-2. What is the hexadecimal representation of each of the following binary numbers?
-    
-    (2진수를 16진수로 변환하시오.)
+7. What is the hexadecimal representation of each of the following binary numbers?
+(2진수를 16진수로 변환하시오.)
     
     a. 0011 0101 1101 1010
     
@@ -135,9 +130,8 @@ unsigned decimal integers?
     
     → 0xFEDB
     
-3. What is the binary representation of the following hexadecimal numbers?
-    
-    (16진수를 2진수로 변환하시오.)
+8. What is the binary representation of the following hexadecimal numbers?
+(16진수를 2진수로 변환하시오.)
     
     a. 0126F9D4
     
@@ -151,9 +145,8 @@ unsigned decimal integers?
     
     1111 0110 1001 1011 1101 1100 0010 1010
     
-4. What is the unsigned decimal representation of each of the following hexadecimal integers?
-    
-    (16진수를 부호 없는 10진수로 변환하시오.)
+9. What is the unsigned decimal representation of each of the following hexadecimal integers?
+(16진수를 부호 없는 10진수로 변환하시오.)
     
     a. 3A
     
@@ -173,9 +166,8 @@ unsigned decimal integers?
     
     = 4097
     
-5. What is the unsigned decimal representation of each of the following hexadecimal integers?
-    
-    (16진수를 부호 없는 10진수로 변환하시오.)
+10. What is the unsigned decimal representation of each of the following hexadecimal integers?
+(16진수를 부호 없는 10진수로 변환하시오.)
     
     a. 62
     
@@ -196,9 +188,8 @@ unsigned decimal integers?
     = 671
     
 
-1. What is the 16-bit hexadecimal representation of each of the following signed decimal integers?
-    
-    (부호 있는 10진수를 16비트 2의 보수로 변환한 16진수 값을 구하시오.)
+11. What is the 16-bit hexadecimal representation of each of the following signed decimal integers?
+(부호 있는 10진수를 16비트 2의 보수로 변환한 16진수 값을 구하시오.)
     
     a. -24
     
@@ -220,9 +211,8 @@ unsigned decimal integers?
     
     → 0xFEB5
     
-2. What is the 16-bit hexadecimal representation of each of the following signed decimal integers?
-    
-    (부호 있는 10진수를 16비트 2의 보수로 변환한 16진수 값을 구하시오.)
+12. What is the 16-bit hexadecimal representation of each of the following signed decimal integers?
+(부호 있는 10진수를 16비트 2의 보수로 변환한 16진수 값을 구하시오.)
     
     a. -21
     
@@ -244,10 +234,9 @@ unsigned decimal integers?
     
     → 0xFFD3
     
-3. The following 16-bit hexadecimal numbers represent signed integers. Convert each to
+13. The following 16-bit hexadecimal numbers represent signed integers. Convert each to
 decimal.
-    
-    (16비트 16진수가 부호 있는 정수로 표현되어 있습니다. 이를 10진수로 변환하시오.)
+(16비트 16진수가 부호 있는 정수로 표현되어 있습니다. 이를 10진수로 변환하시오.)
     
     a. 6BF9
     
@@ -271,10 +260,9 @@ decimal.
     
     → -16096
     
-4. The following 16-bit hexadecimal numbers represent signed integers. Convert each to
+14. The following 16-bit hexadecimal numbers represent signed integers. Convert each to
 decimal.
-    
-    (16비트 16진수가 부호 있는 정수로 표현되어 있습니다. 이를 10진수로 변환하시오.)
+(16비트 16진수가 부호 있는 정수로 표현되어 있습니다. 이를 10진수로 변환하시오.)
     
     a. 4CD2
     
@@ -298,9 +286,8 @@ decimal.
     
     → -32208
     
-5. What is the decimal representation of each of the following signed binary numbers?
-    
-    (8비트 2진수가 부호 있는 정수(2의 보수)로 표현되어 있습니다. 이를 10진수로 변환하시오.)
+15. What is the decimal representation of each of the following signed binary numbers?
+(8비트 2진수가 부호 있는 정수(2의 보수)로 표현되어 있습니다. 이를 10진수로 변환하시오.)
     
     a. 10110101
     
@@ -336,9 +323,8 @@ decimal.
     
     → -16
     
-6. What is the decimal representation of each of the following signed binary numbers?
-    
-    (8비트 2진수가 부호 있는 정수(2의 보수)로 표현되어 있습니다. 이를 10진수로 변환하시오.)
+16. What is the decimal representation of each of the following signed binary numbers?
+(8비트 2진수가 부호 있는 정수(2의 보수)로 표현되어 있습니다. 이를 10진수로 변환하시오.)
     
     a. 10000000
     
@@ -380,10 +366,9 @@ decimal.
     
     → -73
     
-7. What is the 8-bit binary (two’s-complement) representation of each of the following signed
+17. What is the 8-bit binary (two’s-complement) representation of each of the following signed
 decimal integers?
-    
-    (부호 있는 10진수를 8비트 2의 보수로 변환하시오.)
+(부호 있는 10진수를 8비트 2의 보수로 변환하시오.)
     
     a. -5
     
@@ -409,10 +394,9 @@ decimal integers?
     
     1111 0000
     
-8. What is the 8-bit binary (two’s-complement) representation of each of the following signed
+18. What is the 8-bit binary (two’s-complement) representation of each of the following signed
 decimal integers?
-    
-    (부호 있는 10진수를 8비트 2의 보수로 변환하시오.)
+(부호 있는 10진수를 8비트 2의 보수로 변환하시오.)
     
     a. -72
     
@@ -438,9 +422,8 @@ decimal integers?
     
     1110 0110
     
-9. What is the sum of each pair of hexadecimal integers?
-    
-    (16진수 쌍의 합을 구하시오.)
+19. What is the sum of each pair of hexadecimal integers?
+(16진수 쌍의 합을 구하시오.)
     
     a. 6B4 + 3FE
     
@@ -462,9 +445,8 @@ decimal integers?
     
     → 1106
     
-10. What is the sum of each pair of hexadecimal integers?
-    
-    (16진수 쌍의 합을 구하시오.)
+20. What is the sum of each pair of hexadecimal integers?
+(16진수 쌍의 합을 구하시오.)
     
     a. 7C4 + 3BE
     
@@ -487,44 +469,39 @@ decimal integers?
     → 1316
     
 
-1. What are the hexadecimal and decimal representations of the ASCII character capital B?
-    
-    (ASCII 문자 대문자 B를 16진수와 10진수로 나타내면 각각 무엇인가?)
+21. What are the hexadecimal and decimal representations of the ASCII character capital B?
+(ASCII 문자 대문자 B를 16진수와 10진수로 나타내면 각각 무엇인가?)
     
     hexadecimal → 0x42
     
     decimal → 66
     
 
-1.  What are the hexadecimal and decimal representations of the ASCII character capital G?
-    
-    (ASCII 문자 대문자 G를 16진수와 10진수로 나타내면 각각 무엇인가?)
+22.  What are the hexadecimal and decimal representations of the ASCII character capital G?
+(ASCII 문자 대문자 G를 16진수와 10진수로 나타내면 각각 무엇인가?)
     
     hexadecimal → 0x47
     
     decimal → 71
     
 
-1. Challenge: What is the largest decimal value you can represent, using a 129-bit unsigned
+23. Challenge: What is the largest decimal value you can represent, using a 129-bit unsigned
 integer?
-    
-    (129비트 부호 없는 정수(unsigned integer)로 표현할 수 있는 가장 큰 10진수 값은 무엇인가?)
+(129비트 부호 없는 정수(unsigned integer)로 표현할 수 있는 가장 큰 10진수 값은 무엇인가?)
     
     2^129 - 1
     
 
-1. Challenge: What is the largest decimal value you can represent, using a 86-bit signed
+24. Challenge: What is the largest decimal value you can represent, using a 86-bit signed
 integer?
-    
-    (86비트 부호 있는 정수(signed integer)로 표현할 수 있는 가장 큰 10진수 값은 무엇인가?)
+(86비트 부호 있는 정수(signed integer)로 표현할 수 있는 가장 큰 10진수 값은 무엇인가?)
     
     2^85 - 1
     
 
-1. Create a truth table to show all possible inputs and outputs for the boolean function
+25. Create a truth table to show all possible inputs and outputs for the boolean function
 described by ¬(A∨B).
-    
-    (불 대수 함수 ¬(A∨B)에 대해 모든 입력과 출력 조합을 나타내는 진리표(truth table)를 작성하시오.)
+(불 대수 함수 ¬(A∨B)에 대해 모든 입력과 출력 조합을 나타내는 진리표(truth table)를 작성하시오.)
     
     | A | B | ¬(A∨B) |
     | --- | --- | --- |
@@ -533,11 +510,10 @@ described by ¬(A∨B).
     | 1 | 0 | 0 |
     | 1 | 1 | 0 |
 
-1. Create a truth table to show all possible inputs and outputs for the boolean function
+26. Create a truth table to show all possible inputs and outputs for the boolean function
 described by (¬A∧¬B). How would you describe the rightmost column of this table in
 relation to the table from question number 25? Have you heard of De Morgan’s Theorem?
-    
-    (불 대수 함수 (¬A∧¬B)에 대해 모든 입력과 출력 조합을 나타내는 진리표를 작성하시오.)
+(불 대수 함수 (¬A∧¬B)에 대해 모든 입력과 출력 조합을 나타내는 진리표를 작성하시오.)
     
     | A | B | ¬A  | ¬B | ¬A∧¬B |
     | --- | --- | --- | --- | --- |
@@ -546,9 +522,8 @@ relation to the table from question number 25? Have you heard of De Morgan’s T
     | 1 | 0 | 0 | 1 | 0 |
     | 1 | 1 | 0 | 0 | 1 |
 
-1. If a boolean function has four inputs, how many rows are required for its truth table?
-    
-    (불 대수 함수(Boolean function)가 4개의 입력을 가질 때, 이 함수의 진리표(truth table)를 만들려면 몇 개의 행(row)이 필요한가?)
+27. If a boolean function has four inputs, how many rows are required for its truth table?
+(불 대수 함수(Boolean function)가 4개의 입력을 가질 때, 이 함수의 진리표(truth table)를 만들려면 몇 개의 행(row)이 필요한가?)
     
     각 입력값은 2가지 값 가능 (0 또는 1)
     
@@ -557,9 +532,8 @@ relation to the table from question number 25? Have you heard of De Morgan’s T
     → 16행
     
 
-1. How many selector bits are required for a four-input multiplexer?
-    
-    (4개의 입력을 가지는 멀티플렉서(Multiplexer)에서, 선택(selector) 비트는 몇 개가 필요한가?)
+28. How many selector bits are required for a four-input multiplexer?
+(4개의 입력을 가지는 멀티플렉서(Multiplexer)에서, 선택(selector) 비트는 몇 개가 필요한가?)
     
     따라서 4개의 입력을 가지는 멀티플렉서에는 2개의 선택 비트가 필요합니다.
     
