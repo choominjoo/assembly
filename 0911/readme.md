@@ -732,8 +732,7 @@ public class Calc {
     </code>
 </pre>
 9. Devise a way of subtracting unsigned binary integers. Test your technique by subtracting binary 00000101 from binary 10001000, producing 10000011. Test your technique with at least two other sets of integers, in which a smaller value is always subtracted from a larger one.
-    
-    (이진수 뺄셈 알고리즘 구현)
+(이진수 뺄셈 알고리즘 구현)
 <pre>
     <code>
 def binary_to_int(bin_str):
