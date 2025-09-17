@@ -538,3 +538,227 @@ relation to the table from question number 25? Have you heard of De Morgan’s T
     따라서 4개의 입력을 가지는 멀티플렉서에는 2개의 선택 비트가 필요합니다.
     
     → 2개
+
+### 1.7.2 Algorithm Workbench
+
+Use any high-level programming language you wish for the following programming exercises.
+Do not call built-in library functions that accomplish these tasks automatically. (Examples are
+sprintf and sscanf from the Standard C library.)
+
+(다음 프로그래밍 연습에서는 원하는 고급 프로그래밍 언어를 사용해도 됩니다. 다만, 해당 작업을 자동으로 수행해주는 내장 라이브러리 함수는 호출하지 마십시오. (예: C 표준 라이브러리의 sprintf, sscanf 등))
+
+1. Write a function that receives a string containing a 16-bit binary integer. The function must
+return the string’s integer value.
+(16비트 이진수 문자열 → 정수)
+<pre>
+    <code>
+def binary_to_int(binary_str):
+    result = 0
+    for bit in binary_str:
+        result = result * 2 + (1 if bit == '1' else 0)
+    return result
+    </code>
+</pre>
+2. Write a function that receives a string containing a 32-bit hexadecimal integer. The function
+must return the string’s integer value.
+(32비트 16진수 문자열 → 정수)
+<pre>
+    <code>
+def hex_to_int(hex_str):
+    hex_digits = '0123456789ABCDEF'
+    hex_str = hex_str.upper()
+    result = 0
+    for ch in hex_str:
+        value = hex_digits.index(ch)
+        result = result * 16 + value
+    return result
+    </code>
+</pre>
+3. Write a function that receives an integer. The function must return a string containing the
+binary representation of the integer.
+(정수 → 2진수 문자열로 반환)
+<pre>
+    <code>
+def int_to_binary(n):
+    if n == 0:
+        return "0"
+    result = ''
+    while n > 0:
+        result = str(n % 2) + result
+        n = n // 2
+    return result
+    </code>
+</pre>
+4. Write a function that receives an integer. The function must return a string containing the
+hexadecimal representation of the integer.
+(정수 → 16진수 문자열로 반환)
+<pre>
+    <code>
+def int_to_hex(n):
+    if n == 0:
+        return "0"
+    hex_digits = '0123456789ABCDEF'
+    result = ''
+    while n > 0:
+        result = hex_digits[n % 16] + result
+        n = n // 16
+    return result
+    </code>
+</pre>
+5. Write a function that adds two digit strings in base b, where 2 ≤ b ≤ 10. Each string may
+contain as many as 1,000 digits. Return the sum in a string that uses the same number base.
+(두 숫자 문자열을 base b (2 ≤ b ≤ 10)에서 더하기)
+<pre>
+    <code>
+def add_base_b(num1, num2, base):
+    max_len = max(len(num1), len(num2))
+    num1 = num1.zfill(max_len)
+    num2 = num2.zfill(max_len)
+
+    result = ''
+    carry = 0
+
+    for i in range(max_len - 1, -1, -1):
+        digit1 = int(num1[i])
+        digit2 = int(num2[i])
+        total = digit1 + digit2 + carry
+        result = str(total % base) + result
+        carry = total // base
+
+    if carry > 0:
+        result = str(carry) + result
+
+    return result
+    </code>
+</pre>
+6. Write a function that adds two hexadecimal strings, each as long as 1,000 digits. Return a
+hexadecimal string that represents the sum of the inputs.
+(16진수 긴 문자열 두 개 더하기 (최대 1000자리))
+<pre>
+    <code>
+def add_hex_strings(hex1, hex2):
+    hex_digits = '0123456789ABCDEF'
+    hex_to_val = {ch: i for i, ch in enumerate(hex_digits)}
+    val_to_hex = {i: ch for i, ch in enumerate(hex_digits)}
+
+    hex1 = hex1.upper().zfill(max(len(hex1), len(hex2)))
+    hex2 = hex2.upper().zfill(max(len(hex1), len(hex2)))
+
+    result = ''
+    carry = 0
+
+    for i in range(len(hex1) - 1, -1, -1):
+        d1 = hex_to_val[hex1[i]]
+        d2 = hex_to_val[hex2[i]]
+        total = d1 + d2 + carry
+        carry = total // 16
+        result = val_to_hex[total % 16] + result
+
+    if carry > 0:
+        result = val_to_hex[carry] + result
+
+    return result
+    </code>
+</pre>
+7. Write a function that multiplies a single hexadecimal digit by a hexadecimal digit string as
+long as 1,000 digits. Return a hexadecimal string that represents the product.
+(한 자리 16진수 * 1000자리 16진수 문자열)
+<pre>
+    <code>
+def multiply_hex_digit_by_string(digit, hex_string):
+    hex_digits = '0123456789ABCDEF'
+    digit = digit.upper()
+    hex_string = hex_string.upper()
+
+    hex_to_val = {ch: i for i, ch in enumerate(hex_digits)}
+    val_to_hex = {i: ch for i, ch in enumerate(hex_digits)}
+
+    d = hex_to_val[digit]
+    carry = 0
+    result = ''
+
+    for ch in reversed(hex_string):
+        mul = d * hex_to_val[ch] + carry
+        carry = mul // 16
+        result = val_to_hex[mul % 16] + result
+
+    if carry > 0:
+        result = val_to_hex[carry] + result
+
+    return result
+    </code>
+</pre>
+8. Write a Java program that contains the calculation shown below. Then, use the `javap –c` command to disassemble your code. Add comments to each line that provide your best
+guess as to its purpose.
+int Y;
+int X = (Y + 4) * 3;
+(Java 프로그램 작성 및 `javap -c` 결과 해석)
+<pre>
+    <code>
+public class Calc {
+    public static void main(String[] args) {
+        int Y = 2; // 어떤 값이든 OK
+        int X = (Y + 4) * 3;
+        System.out.println(X);
+    }
+}
+    </code>
+</pre>
+<pre>
+    <code>
+// Compiled from "Calc.java"
+public class Calc {
+  public Calc();
+    Code:
+       0: aload_0                  // this 객체 로드
+       1: invokespecial #1        // Object 클래스의 생성자 호출
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: iconst_2                // 정수 2 (Y의 값) push
+       1: istore_1                // 지역 변수 1번(Y)에 저장
+       2: iload_1                 // Y 로드
+       3: iconst_4                // 정수 4 push
+       4: iadd                    // Y + 4 계산
+       5: iconst_3                // 정수 3 push
+       6: imul                    // 곱셈 (Y+4) * 3
+       7: istore_2                // 지역 변수 2번(X)에 저장
+       8: getstatic #2            // System.out 불러오기
+      11: iload_2                 // X 값 로드
+      12: invokevirtual #3        // println(X)
+      15: return
+}
+    </code>
+</pre>
+9. Devise a way of subtracting unsigned binary integers. Test your technique by subtracting binary 00000101 from binary 10001000, producing 10000011. Test your technique with at least two other sets of integers, in which a smaller value is always subtracted from a larger one.
+    
+    (이진수 뺄셈 알고리즘 구현)
+<pre>
+    <code>
+def binary_to_int(bin_str):
+    """2진수 문자열을 정수로 변환"""
+    result = 0
+    for bit in bin_str:
+        result = result * 2 + int(bit)
+    return result
+
+def int_to_8bit_binary(n):
+    """정수를 8비트 2진수 문자열로 변환"""
+    result = ''
+    for i in range(7, -1, -1):
+        bit = (n >> i) & 1
+        result += str(bit)
+    return result
+
+def subtract_unsigned_bin(bin1, bin2):
+    """Unsigned 8비트 이진수 뺄셈"""
+    a = binary_to_int(bin1)
+    b = binary_to_int(bin2)
+    if a < b:
+        raise ValueError("Cannot subtract a larger number from a smaller one in unsigned binary")
+    diff = a - b
+    return int_to_8bit_binary(diff)
+
+    </code>
+</pre>
